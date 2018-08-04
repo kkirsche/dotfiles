@@ -1,0 +1,26 @@
+[user]
+	name = Kevin Kirsche
+[commit]
+  # https://help.github.com/articles/signing-commits-using-gpg/
+	gpgsign = true
+[push]
+  # Make `git push` push relevant annotated tags when pushing branches out.
+	followTags = true
+[gpg]
+	program = /usr/local/bin/gpg
+[core]
+  # VIM master race, duh
+	editor = vim
+  # Convert <CR><LF> characters into <LF> only, to avoid issues with Windows
+  # and macOS cross platform usage
+	autocrlf = input
+[color]
+  # Use colors in Git commands that are capable of colored output when
+	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
+	ui = auto
+[help]
+  # Automatically correct and execute mistyped commands
+	autocorrect = 1
+[merge]
+	# Include summaries of merged commits in newly created merge commit messages
+	log = true
