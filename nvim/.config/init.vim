@@ -20,12 +20,14 @@ if has("unix")
 endif
 " Layout
 Plug 'scrooloose/nerdtree'
-Plug 'airblade/vim-gitgutter'
 " Themes / Visual
 Plug 'phanviet/vim-monokai-pro'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+" Git
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 " General programming
 Plug 'scrooloose/nerdcommenter'
 Plug 'w0rp/ale'
@@ -84,6 +86,7 @@ noremap <Right> :echo "l is right"<CR>
 " Plugin Configuration
 " =====================
 " Airline
+let g:airline#exensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'base16_monokai'
 let g:airline_powerline_fonts = 1
@@ -91,4 +94,7 @@ let g:airline_powerline_fonts = 1
 let g:deoplete#enable_at_startup = 1
 " NERDtree
 map <C-n> :NERDTreeToggle<CR>
-
+" ALE - Asynchronous Lint Engine
+let g:ale_list_window_size = 7
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
