@@ -10,6 +10,7 @@ set expandtab
 set autochdir
 set splitbelow
 set splitright
+set hlsearch
 
 " Python ident
 au FileType python set ts=8 sts=4 et sw=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
