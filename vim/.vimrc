@@ -7,6 +7,7 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+set smartindent
 set autochdir
 set splitbelow
 set splitright
@@ -14,7 +15,7 @@ set hlsearch
 
 " Python ident
 au FileType python set ts=8 sts=4 et sw=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-au FileType go set ts=2 sts=2 sw=2 noet
+au FileType go set ts=2 sts=2 sw=2 noet smartindent
 
 " Vundle Configuration
 filetype off                  " required
