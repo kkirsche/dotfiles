@@ -29,7 +29,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 " General programming
-Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-commentary'
 Plug 'w0rp/ale'
 Plug 'tpope/vim-surround'
 if has('nvim')
