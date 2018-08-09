@@ -20,6 +20,7 @@ if has("unix")
 endif
 " Layout
 Plug 'scrooloose/nerdtree'
+Plug 'majutsushi/tagbar'
 " Themes / Visual
 Plug 'phanviet/vim-monokai-pro'
 Plug 'ryanoasis/vim-devicons'
@@ -31,6 +32,7 @@ Plug 'airblade/vim-gitgutter'
 " General programming
 Plug 'tpope/vim-commentary'
 Plug 'w0rp/ale'
+Plug 'ervandew/supertab'
 Plug 'tpope/vim-surround'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -70,6 +72,7 @@ set hlsearch
 set completeopt-=preview
 set ruler
 " Colors
+set background=dark
 set t_Co=256
 if (has("termguicolors"))
   set termguicolors
@@ -94,6 +97,8 @@ let g:airline_powerline_fonts = 1
 let g:deoplete#enable_at_startup = 1
 " NERDtree
 map <C-n> :NERDTreeToggle<CR>
+" Tagbar
+map <C-m> :TagbarToggle<CR>
 " ALE - Asynchronous Lint Engine
 let g:ale_list_window_size = 7
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
