@@ -16,11 +16,16 @@
         pager = less -RFX
 [color]
   # Use colors in Git commands that are capable of colored output when
-	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
+  # outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
 	ui = auto
 [help]
   # Automatically correct and execute mistyped commands
 	autocorrect = 1
 [merge]
-	# Include summaries of merged commits in newly created merge commit messages
+        # Include summaries of merged commits in newly created merge
+        # commit messages
 	log = true
+[diff]
+  # Have git use the histogram method, which separates the changesets from each
+  # other rather than trying to figure out what belongs with what
+        algorithm = histogram
