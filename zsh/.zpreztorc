@@ -146,7 +146,6 @@ zstyle ':prezto:module:prompt' theme 'powerlevel9k'
 # zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
 
 #
-#
 # Screen
 #
 
