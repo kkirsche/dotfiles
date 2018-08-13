@@ -17,7 +17,7 @@ fi
 alias killproxy='unset http_proxy; unset https_proxy; unset HTTP_PROXY; unset HTTPS_PROXY'
 
 # ruby setup
-if ! type "rbenv" > /dev/null; then
+if [ -x "$(command -v rbenv)" ]; then
   eval "$(rbenv init -)"
 fi
 
