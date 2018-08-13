@@ -29,7 +29,7 @@ fi
 # reminders
 # `defaults domains` to get all mac domain's you can control
 # to make this easier to read: `defaults domains | tr , '\n'`
-if [ "$(uname 2> /dev/null)" == "Darwin" ]; then
+if [ "$(uname 2> /dev/null)" = "Darwin" ]; then
   test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 fi
 export POWERLEVEL9K_MODE='nerdfonts-complete'

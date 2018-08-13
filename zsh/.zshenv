@@ -27,7 +27,7 @@ fi
 # Terminal Configuration
 export VISUAL="nvim"
 export EDITOR="${VISUAL}"
-if [ "$(uname 2> /dev/null)" == "Darwin" ]; then
+if [ "$(uname 2> /dev/null)" = "Darwin" ]; then
   export HOMEBREW_NO_ANALYTICS=1
 fi
 
