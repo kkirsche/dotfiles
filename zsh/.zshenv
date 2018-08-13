@@ -6,15 +6,30 @@
 #   Kevin Kirsche <kev.kirsche@gmail.com>
 #
 
+# Ensure we have the basic path setup
+case `uname` in
+  Darwin)
+    export PATH='/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:'
+  ;;
+  Linux)
+    export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/bin:/usr/games:/usr/local/games:/snap/bin:."
+  ;;
+  FreeBSD)
+    export PATH="$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games:."
+  ;;
+esac
+
 # Ensure that a non-login, non-interactive shell has a defined environment.
 if [[ "${SHLVL}" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
 # Terminal Configuration
-export VISUAL="vim"
+export VISUAL="nvim"
 export EDITOR="${VISUAL}"
-export HOMEBREW_NO_ANALYTICS=1
+if [ "$(uname 2> /dev/null)" == "Darwin" ]; then
+  export HOMEBREW_NO_ANALYTICS=1
+fi
 
 # Golang Configuration
 export GOPATH="${HOME}/git/go"
