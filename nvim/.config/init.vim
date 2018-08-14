@@ -102,5 +102,11 @@ map <C-n> :NERDTreeToggle<CR>
 map <C-m> :TagbarToggle<CR>
 " ALE - Asynchronous Lint Engine
 let g:ale_list_window_size = 7
+let g:ale_fixers = {
+\     '*': ['remove_trailing_lines', 'trim_whitespace'],
+\     'python': ['isort', 'autopep8'],
+\     'javascript': ['eslint', 'prettier']
+\   }
+let g:ale_fix_on_save = 1
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
