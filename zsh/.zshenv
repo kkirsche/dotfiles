@@ -19,6 +19,15 @@ case `uname` in
   ;;
 esac
 
+# Work proxy information
+
+if [ "$(whoami)" = "v832272" ]; then
+  export http_proxy="http://asqproxy.vzbi.com:80/"
+  export https_proxy="${http_proxy}"
+  export HTTP_PROXY="${http_proxy}"
+  export HTTPS_PROXY="${http_proxy}"
+fi
+
 # Ensure that a non-login, non-interactive shell has a defined environment.
 if [[ "${SHLVL}" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
