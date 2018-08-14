@@ -52,7 +52,6 @@ export PATH="${HOME}/.rbenv/bin:${PATH}"
 export PATH="${PATH}:${HOME}/.cargo/bin"
 
 # Python Configuration
-export PATH="/usr/local/opt/python/libexec/bin:/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/lib/python3.7/site-packages/pipenv:${PATH}"
 export PYTHONASYNCIODEBUG="1"
 
 # Vagrant Configuration
