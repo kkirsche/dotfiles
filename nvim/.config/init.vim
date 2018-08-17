@@ -62,6 +62,9 @@ set softtabstop=2
 set expandtab
 set smartindent
 set autoindent
+" Shift to the next shift location based on shiftwidth rather than just
+" indenting by  the width
+set shiftround
 " Directory Behavior
 set autochdir
 " Split Behavior
