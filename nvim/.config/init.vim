@@ -117,8 +117,8 @@ let g:ale_fixers = {
 \     'python': ['isort', 'autopep8'],
 \     'javascript': ['eslint', 'prettier'],
 \     'json': ['fixjson', 'jq', 'prettier'],
-\     'c': ['clang-format', 'gcc'],
-\     'c++': ['clang-format', 'gcc']
+\     'c': ['clang-format'],
+\     'c++': ['clang-format']
 \   }
 let g:ale_fix_on_save = 1
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
