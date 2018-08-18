@@ -93,7 +93,8 @@ noremap <Right> :echo "l is right"<CR>
 " Filetype Overrides
 " =====================
 " Make sure assembly is syntax highlighted
-:let filetype_i = "asm"
+au BufRead,BufNewFile *.nasm set filetype=nasm
+au BufRead,BufNewFile *.asm set filetype=asm
 " =====================
 " Plugin Configuration
 " =====================
