@@ -107,9 +107,12 @@ map <C-m> :TagbarToggle<CR>
 let g:ale_list_window_size = 7
 let g:ale_fixers = {
 \     '*': ['remove_trailing_lines', 'trim_whitespace'],
+\     'asm': ['gcc'],
 \     'python': ['isort', 'autopep8'],
 \     'javascript': ['eslint', 'prettier'],
-\     'json': ['fixjson', 'jq', 'prettier']
+\     'json': ['fixjson', 'jq', 'prettier'],
+\     'c': ['clang-format', 'gcc'],
+\     'c++': ['clang-format', 'gcc]
 \   }
 let g:ale_fix_on_save = 1
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
