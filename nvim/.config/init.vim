@@ -90,6 +90,11 @@ noremap <Up> :echo "k is up"<CR>
 noremap <Right> :echo "l is right"<CR>
 
 " =====================
+" Filetype Overrides
+" =====================
+" Make sure assembly is syntax highlighted
+:let filetype_i = "asm"
+" =====================
 " Plugin Configuration
 " =====================
 " Airline
