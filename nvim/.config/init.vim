@@ -91,6 +91,12 @@ noremap <Up> :echo "k is up"<CR>
 noremap <Right> :echo "l is right"<CR>
 
 " =====================
+" Filetype Overrides
+" =====================
+" Make sure assembly is syntax highlighted
+au BufRead,BufNewFile *.nasm set filetype=nasm
+au BufRead,BufNewFile *.asm set filetype=asm
+" =====================
 " Plugin Configuration
 " =====================
 " Airline
@@ -110,9 +116,12 @@ map <C-m> :TagbarToggle<CR>
 let g:ale_list_window_size = 7
 let g:ale_fixers = {
 \     '*': ['remove_trailing_lines', 'trim_whitespace'],
+\     'asm': ['gcc'],
 \     'python': ['isort', 'autopep8'],
 \     'javascript': ['eslint', 'prettier'],
-\     'json': ['fixjson', 'jq', 'prettier']
+\     'json': ['fixjson', 'jq', 'prettier'],
+\     'c': ['clang-format'],
+\     'c++': ['clang-format']
 \   }
 let g:ale_fix_on_save = 1
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
