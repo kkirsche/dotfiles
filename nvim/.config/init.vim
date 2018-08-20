@@ -41,8 +41,9 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
+Plug 'zchee/deoplete-go', { 'do': 'make'}
 " Golang support
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " HTML
 Plug 'mattn/emmet-vim'
 call plug#end()
@@ -99,6 +100,8 @@ let g:airline_theme = 'base16_monokai'
 let g:airline_powerline_fonts = 1
 " Deoplete
 let g:deoplete#enable_at_startup = 1
+"" use tab to forward cycle
+inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 " NERDtree
 map <C-n> :NERDTreeToggle<CR>
 " Tagbar
