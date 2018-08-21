@@ -46,6 +46,8 @@ Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " HTML
 Plug 'mattn/emmet-vim'
+" YANG Data Model
+Plug 'nathanalderson/yang.vim'
 call plug#end()
 
 " =====================
@@ -106,8 +108,8 @@ let g:airline_theme = 'base16_monokai'
 let g:airline_powerline_fonts = 1
 " Deoplete
 let g:deoplete#enable_at_startup = 1
-"" use tab to forward cycle
-inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+" NOTE: Ctrl+n is the "next" autocomplete entry
+" NOTE: Ctrl+p is the "previous" autocomplete entry
 " NERDtree
 map <C-n> :NERDTreeToggle<CR>
 " Tagbar
