@@ -48,6 +48,8 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'mattn/emmet-vim'
 " YANG Data Model
 Plug 'nathanalderson/yang.vim'
+" Spike Fuzzer
+Plug 'kkirsche/spike.vim'
 call plug#end()
 
 " =====================
