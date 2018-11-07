@@ -36,3 +36,5 @@ export POWERLEVEL9K_MODE='nerdfonts-complete'
 export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
 export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
 bindkey '^R' history-incremental-search-backward
+export VISUAL="nvim"
+export EDITOR="${VISUAL}"
