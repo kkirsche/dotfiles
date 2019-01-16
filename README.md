@@ -15,6 +15,8 @@ nvim -c GoUpdateBinaries -c qa
 ## Configuration File
 
 ```yaml
+# ~/.config/chezmoi/chezmoi.yaml
+
 data:
   name: "YOUR NAME"
   email: "YOUR EMAIL"
