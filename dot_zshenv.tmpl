@@ -3,30 +3,31 @@
 #
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
-#   Kevin Kirsche <kev.kirsche@gmail.com>
+#   {{ .name }} <{{ .email }}>
 #
 
 # Ensure we have the basic path setup
-case `uname` in
-  Darwin)
-    export PATH='/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:'
-  ;;
-  Linux)
-    export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/bin:/usr/games:/usr/local/games:/snap/bin:."
-  ;;
-  FreeBSD)
-    export PATH="$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games:."
-  ;;
-esac
+{{ if eq .chezmoi.os "darwin" -}}
+export PATH='/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:'
 
+{{ else if eq .chezmoi.os "linux" -}}
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/bin:/usr/games:/usr/local/games:/snap/bin:."
+
+{{ else if eq .chezmoi.os "freebsd" -}}
+export PATH="$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games:."
+
+{{ end -}}
+
+{{ if .is_work_machine }}
 # Work proxy information
-
-if [ "$(whoami)" = "v832272" ]; then
-  export http_proxy="http://asqproxy.vzbi.com:80/"
+if [ "$(whoami)" = "{{ .chezmoi.username }}" ]; then
+  export http_proxy="http://vzproxy.verizon.com:80/"
   export https_proxy="${http_proxy}"
   export HTTP_PROXY="${http_proxy}"
   export HTTPS_PROXY="${http_proxy}"
 fi
+
+{{ end -}}
 
 # Ensure that a non-login, non-interactive shell has a defined environment.
 if [[ "${SHLVL}" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-HOME}/.zprofile" ]]; then
@@ -36,14 +37,15 @@ fi
 # Terminal Configuration
 export VISUAL="nvim"
 export EDITOR="${VISUAL}"
-if [ "$(uname 2> /dev/null)" = "Darwin" ]; then
-  export HOMEBREW_NO_ANALYTICS=1
-fi
+{{ if eq .chezmoi.os "darwin" -}}
+export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_INSTALL_CLEANUP=1
+
+{{ end -}}
 
 # Golang Configuration
 export GOPATH="${HOME}/git/go"
 export PATH="${PATH}:${GOPATH}/bin" # Add Golang binaries to the path
-export PATH="${PATH}:/usr/local/opt/go/libexec/bin"
 
 # Ruby Configuration
 export PATH="${HOME}/.rbenv/bin:${PATH}"

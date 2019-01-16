@@ -23,6 +23,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
 " Themes / Visual
 Plug 'phanviet/vim-monokai-pro'
+Plug 'patstockwell/vim-monokai-tasty'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -87,7 +88,9 @@ if (has("termguicolors"))
   set termguicolors
 endif
 let base16colorspace = 256
-colorscheme monokai_pro
+" colorscheme monokai_pro
+let g:vim_monokai_tasty_italic = 1
+colorscheme vim-monokai-tasty
 " Learn neovim
 noremap <Left> :echo "h is left"<CR>
 noremap <Down> :echo "j is down"<CR>
@@ -106,7 +109,8 @@ au BufRead,BufNewFile *.asm set filetype=asm
 " Airline
 let g:airline#exensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'base16_monokai'
+"let g:airline_theme = 'base16_monokai'
+let g:airline_theme='monokai_tasty'
 let g:airline_powerline_fonts = 1
 " Deoplete
 let g:deoplete#enable_at_startup = 1

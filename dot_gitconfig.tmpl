@@ -1,31 +1,34 @@
 [user]
-	name = Kevin Kirsche
+  name = {{ .name }}
+  email = {{ .email }}
 [commit]
   default = current
   # https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
+  gpgsign = false
 [push]
   # Make `git push` push relevant annotated tags when pushing branches out.
-	followTags = true
-[gpg]
-	program = /usr/local/bin/gpg
+  followTags = true
 [core]
   # VIM master race, duh
-	editor = vim
+  editor = nvim
   # Set less to use better paging options
-        pager = less -RFX
+  pager = less -RFX
+  whitespace = trailing-space,space-before-tab
 [color]
   # Use colors in Git commands that are capable of colored output when
   # outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
-	ui = auto
+  ui = auto
 [help]
   # Automatically correct and execute mistyped commands
-	autocorrect = 1
+  autocorrect = 1
 [merge]
-        # Include summaries of merged commits in newly created merge
-        # commit messages
-	log = true
+  # Include summaries of merged commits in newly created merge
+  # commit messages
+  log = true
 [diff]
   # Have git use the histogram method, which separates the changesets from each
   # other rather than trying to figure out what belongs with what
-        algorithm = histogram
+  algorithm = histogram
+[github]
+  user = kkirsche
+  token = {{ .github_access_token }}

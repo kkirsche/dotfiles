@@ -1,6 +1,0 @@
-urxvt*depth: 32
-urxvt*background: rgba:0000/0000/0200/a500
-urxvt*font: xft:Source Code Pro:size=10:antialias=true:hinting=true
-urxvt*boldFont: xft:Source Code Pro:style=Bold:size=10:antialias=true:hinting=true
-urxvt*italicFont: xft:Source Code Pro:style=Oblique:size=10:antialias=true:hinting=true
-urxvt*boldItalicFont: xft:Source Code Pro:style=Bold Oblique:size=10:antialias=true:hinting=true
