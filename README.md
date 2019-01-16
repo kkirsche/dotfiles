@@ -4,8 +4,8 @@ Dotfiles for configuration across systems
 ## Usage
 
 ```
-git clone https://github.com/kkirsche/dotfiles /Users/kkirsche/.local/share/chezmoi
-chmod 0700 /Users/kkirsche/.local/share/chezmoi
+git clone https://github.com/kkirsche/dotfiles ~/.local/share/chezmoi
+chmod 0700 ~/.local/share/chezmoi
 chezmoi diff
 chezmoi apply -v
 nvim -c PlugUpdate -c qa
