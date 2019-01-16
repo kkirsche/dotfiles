@@ -27,6 +27,7 @@ Plug 'patstockwell/vim-monokai-tasty'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'patstockwell/vim-monokai-tasty'
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
