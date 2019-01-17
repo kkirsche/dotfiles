@@ -121,6 +121,10 @@ let g:deoplete#enable_at_startup = 1
 map <C-n> :NERDTreeToggle<CR>
 " Tagbar
 map <C-m> :TagbarToggle<CR>
+{{ if eq .chezmoi.os "linux" -}}
+" Vim Go
+let g:go_version_warning = 0
+{{ end -}}
 " ALE - Asynchronous Lint Engine
 let g:ale_list_window_size = 7
 let g:ale_fixers = {
