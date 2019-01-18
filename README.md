@@ -4,10 +4,14 @@ Dotfiles for configuration across systems
 ## Usage
 
 ```
+apt-get -y install software-properties-common
+add-apt-repository ppa:neovim-ppa/stable && sudo apt-get update
+apt-get -y install git go neovim
 git clone https://github.com/kkirsche/dotfiles ~/.local/share/chezmoi
 chmod 0700 ~/.local/share/chezmoi
-chezmoi diff
-chezmoi apply -v
+go get -u -v github.com/twpayne/chezmoi
+~/go/bin/chezmoi diff
+~/go/bin/chezmoi apply -v
 nvim -c PlugUpdate -c qa
 nvim -c GoUpdateBinaries -c qa
 ```
