@@ -40,3 +40,7 @@ export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
 bindkey '^R' history-incremental-search-backward
 export VISUAL="nvim"
 export EDITOR="${VISUAL}"
+
+function cheat() {
+  curl cht.sh/$1
+}
