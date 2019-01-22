@@ -12,6 +12,9 @@ chmod 0700 ~/.local/share/chezmoi
 go get -u -v github.com/twpayne/chezmoi
 ~/go/bin/chezmoi diff
 ~/go/bin/chezmoi apply -v
+tic -x ~/.xterm-256color-italic.terminfo
+tic -x ~/.tmux-256color.terminfo
+nvim -c PlugUpgrade -c qa
 nvim -c PlugUpdate -c qa
 nvim -c GoUpdateBinaries -c qa
 ```
