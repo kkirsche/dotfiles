@@ -1,8 +1,8 @@
 # ====================
 # General Settings
 # ====================
-set -g default-terminal "xterm-256color"
-set-option -ga terminal-overrides ",xterm-256color:Tc"
+set -g default-terminal "tmux-256color"
+set-option -ga terminal-overrides ',xterm*:Tc:sitm=\E[3m'
 set -g history-limit 20000
 set -g buffer-limit 20
 set -sg escape-time 0
