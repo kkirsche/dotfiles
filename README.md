@@ -5,8 +5,8 @@ Dotfiles for configuration across systems
 
 ```
 apt-get -y install software-properties-common
-add-apt-repository ppa:neovim-ppa/stable && sudo apt-get update
-apt-get -y install git go neovim
+add-apt-repository universe && add-apt-repository ppa:neovim-ppa/stable && sudo apt-get update
+apt-get -y install git go neovim fonts-firacode
 git clone https://github.com/kkirsche/dotfiles ~/.local/share/chezmoi
 chmod 0700 ~/.local/share/chezmoi
 go get -u -v github.com/twpayne/chezmoi
