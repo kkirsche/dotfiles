@@ -6,10 +6,12 @@ Dotfiles for configuration across systems
 ```
 apt-get -y install software-properties-common
 add-apt-repository universe && add-apt-repository ppa:neovim-ppa/stable && sudo apt-get update
-apt-get -y install git golang neovim fonts-firacode python3-pip
+apt-get -y install curl git golang neovim fonts-firacode python3-pip
 git clone https://github.com/kkirsche/dotfiles ~/.local/share/chezmoi
 chmod 0700 ~/.local/share/chezmoi
 go get -u -v github.com/twpayne/chezmoi
+mkdir -p ~/.config/chezmoi
+nvim ~/.config/chezmoi/chezmoi.yaml
 ~/go/bin/chezmoi diff
 ~/go/bin/chezmoi apply -v
 tic -x ~/.xterm-256color-italic.terminfo
