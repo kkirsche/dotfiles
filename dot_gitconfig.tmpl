@@ -25,10 +25,15 @@
   # Include summaries of merged commits in newly created merge
   # commit messages
   log = true
+[difftool]
+  prompt = false
 [diff]
   # Have git use the histogram method, which separates the changesets from each
   # other rather than trying to figure out what belongs with what
   algorithm = histogram
+  tool = nvimdiff
+[difftool "nvimdiff"]
+  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 [github]
   user = kkirsche
   token = {{ .github_access_token }}
