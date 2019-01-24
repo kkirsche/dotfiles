@@ -33,4 +33,7 @@ data:
   is_work_machine: False
   work_user_id: "WORK USERNAME"
   github_access_token: "YOUR ACCESS TOKEN"
+  gpg:
+    sign: True
+    signingkey: "SIGNING KEY ID"
 ```
