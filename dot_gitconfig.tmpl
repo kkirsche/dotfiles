@@ -1,10 +1,13 @@
 [user]
   name = {{ .name }}
   email = {{ .email }}
+  {{ if .gpg.sign -}}
+  signingkey = {{ .gpg.signingkey }}
+  {{- end }}
 [commit]
   default = current
   # https://help.github.com/articles/signing-commits-using-gpg/
-  gpgsign = false
+  gpgsign = {{ .gpg.sign }}
 [push]
   # Make `git push` push relevant annotated tags when pushing branches out.
   followTags = true
