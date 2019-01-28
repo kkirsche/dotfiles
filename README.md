@@ -20,6 +20,7 @@ python3 -m pip install -U neovim
 nvim -c PlugUpgrade -c qa
 nvim -c PlugUpdate -c qa
 nvim -c GoUpdateBinaries -c qa
+nvim -c BlackUpgrade -c qa
 ```
 
 ## Configuration File
