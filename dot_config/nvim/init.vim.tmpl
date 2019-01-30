@@ -107,6 +107,12 @@ noremap <Right> :echo "l is right"<CR>
 " Make sure assembly is syntax highlighted
 au BufRead,BufNewFile *.nasm set filetype=nasm
 au BufRead,BufNewFile *.asm set filetype=asm
+" Vagrantfiles
+" Upstream: https://github.com/hashicorp/vagrant/blob/master/contrib/vim/vagrantfile.vim
+augroup vagrant
+  au!
+  au BufRead, BufNewFile Vagrantfile set filetype=ruby
+augroup END
 " =====================
 " Plugin Configuration
 " =====================
